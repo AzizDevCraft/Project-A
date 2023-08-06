@@ -1,6 +1,6 @@
 import random 
 
-with open ("C:/Users/azizb/documents/github_space/Project-A/fichier.txt", "r") as data :
+with open ("fichier.txt", "r") as data :
     words = data.read().split ("\n")[:-1]
 
 alpha = set () #liste des lettres à ne pas utiliser 
@@ -9,6 +9,7 @@ x = random.randint (0, len (words)-1) # Pour choisir l'indice d'un mot au hasard
 word = words [x].lower ()
 print ("-----") # affichage du mot caché
 i = 0 # compteur des tentatives possibles 
+print ("mot :", word)
 
 while i <= 6 :
     ch = ['-','-','-','-','-'] 
