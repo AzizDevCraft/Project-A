@@ -9,7 +9,6 @@ x = random.randint (0, len (words)-1) # Pour choisir l'indice d'un mot au hasard
 word = words [x].lower ()
 print ("-----") # affichage du mot caché
 i = 0 # compteur des tentatives possibles 
-print ("mot :", word)
 
 while i <= 6 :
     ch = ['-','-','-','-','-'] 
