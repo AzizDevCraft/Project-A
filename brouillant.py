@@ -1,6 +1,6 @@
-l = [0,"1","5","4","8"]
-print (l)
-l[0] = 'a'
-print (l)
-ch = "".join(l)
-print (ch)
+import re 
+l = "aziz"
+copy = l
+for i in l : 
+    copy = copy.replace (i,"",1)
+    print (copy)
