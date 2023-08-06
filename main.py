@@ -1,5 +1,4 @@
 import random 
-import re 
 
 with open ("C:/Users/azizb/documents/github_space/Project-A/fichier.txt", "r") as data :
     words = data.read().split ("\n")[:-1]
@@ -8,13 +7,11 @@ alpha = set () #liste des lettres à ne pas utiliser
 
 x = random.randint (0, len (words)-1) # Pour choisir l'indice d'un mot au hasard 
 word = words [x].lower ()
-print ("mot :", word)
 print ("-----") # affichage du mot caché
 i = 0 # compteur des tentatives possibles 
 
 while i <= 6 :
     ch = ['-','-','-','-','-'] 
-    copy = word
     if i == 6 : 
         print ("c'est votre dernière chance !")
     while True : 
@@ -26,13 +23,11 @@ while i <= 6 :
             continue
         else : 
             break 
-    for l in essai :
-        if l in copy : 
-            a = re.search (l, word).span ()[0] 
-            ch[a] = l
+    for pos, item in enumerate (essai) :
+        if item in word : 
+            ch [pos] = item
         else : 
-            alpha.add (l)
-        copy = copy.replace (l, "", 1)
+            alpha.add (item)
 
     word_cache = "".join (ch)
     print (word_cache)
