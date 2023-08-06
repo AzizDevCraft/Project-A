@@ -21,8 +21,7 @@ while i <= 6 :
         except AssertionError : 
             print ("tu peux entrer seulement un mot de 6 lettres seulement !")
             continue
-        else : 
-            break 
+        break 
     for pos, item in enumerate (essai) :
         if item in word : 
             ch [pos] = item
